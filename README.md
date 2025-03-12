@@ -1,5 +1,7 @@
 # NovaLedger - 究極のブロックチェーン技術
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/01430e1e-8ce0-46d3-a66f-2a865419a958/deploy-status)](https://app.netlify.com/sites/novaledger/deploys)
+
 NovaLedgerは、次世代のブロックチェーン技術を実現するコンセプトプロジェクトです。超高速処理、高スケーラビリティ、ゼロ遅延決済、最小手数料、究極の分散性、量子耐性、AIによる最適化など、現在のブロックチェーン技術の限界を超える革新的な機能を提案しています。
 
 ## 主な特徴
@@ -56,11 +58,12 @@ NFTマーケットプレイス、DEX、DeFi、メタバース、ゲーミング�
 このリポジトリをクローンした後、以下のコマンドでウェブサーバーを起動できます：
 
 ```bash
-cd novaledger
-python -m http.server 8000
+cd NovaLedger/vite-website
+npm install
+npm run dev
 ```
 
-その後、ブラウザで `http://localhost:8000` にアクセスしてください。
+その後、ブラウザで表示されるURLにアクセスしてください。
 
 ## 免責事項
 
@@ -68,4 +71,4 @@ NovaLedgerは現時点ではコンセプト段階のプロジェクトであり�
 
 ## ライセンス
 
-© 2023 NovaLedger. All rights reserved.
+© 2025 NovaLedger. All rights reserved.
