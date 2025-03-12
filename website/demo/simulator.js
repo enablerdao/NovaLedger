@@ -1,4 +1,4 @@
-// UltimaChain ブロックチェーンシミュレーター
+// NovaLedger ブロックチェーンシミュレーター
 
 document.addEventListener('DOMContentLoaded', function() {
     // DOM要素
@@ -227,7 +227,7 @@ document.addEventListener('DOMContentLoaded', function() {
             simulationData.transactions.push(tx);
             
             if (Math.random() < 0.1) { // 10%の確率でログに表示
-                addLogEntry('INFO', `新しいトランザクション: ${tx.id.substring(0, 8)}... (${tx.sender.substring(0, 6)} → ${tx.receiver.substring(0, 6)}, ${tx.amount.toFixed(2)} ULT)`);
+                addLogEntry('INFO', `新しいトランザクション: ${tx.id.substring(0, 8)}... (${tx.sender.substring(0, 6)} → ${tx.receiver.substring(0, 6)}, ${tx.amount.toFixed(2)} NVL)`);
             }
         }
     }
@@ -760,7 +760,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function getConsensusName(type) {
         switch (type) {
             case 'pou':
-                return 'Proof of Ultima (PoU)';
+                return 'Proof of Nova (PoN)';
             case 'pos':
                 return 'Proof of Stake (PoS)';
             case 'pow':
