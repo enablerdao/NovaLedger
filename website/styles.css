@@ -268,7 +268,7 @@ nav {
     justify-content: center;
 }
 
-.pou-diagram, .aidao-diagram {
+.pon-diagram, .aidao-diagram {
     width: 100%;
     height: 300px;
     background-color: rgba(255, 255, 255, 0.1);
