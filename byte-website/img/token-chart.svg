@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6c5ce7" />
+      <stop offset="100%" stop-color="#4834d4" />
+    </linearGradient>
+    <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00cec9" />
+      <stop offset="100%" stop-color="#00b894" />
+    </linearGradient>
+    <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fd79a8" />
+      <stop offset="100%" stop-color="#e84393" />
+    </linearGradient>
+    <linearGradient id="gradient4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fdcb6e" />
+      <stop offset="100%" stop-color="#e17055" />
+    </linearGradient>
+    <linearGradient id="gradient5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#74b9ff" />
+      <stop offset="100%" stop-color="#0984e3" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="#2d3436" flood-opacity="0.3" />
+    </filter>
+  </defs>
+  
+  <!-- 円グラフ -->
+  <g transform="translate(200, 200)">
+    <!-- エコシステム開発 (30%) -->
+    <path d="M 0 0 L 0 -150 A 150 150 0 0 1 129.9 -75 Z" fill="url(#gradient1)" filter="url(#shadow)" />
+    
+    <!-- コミュニティ報酬 (25%) -->
+    <path d="M 0 0 L 129.9 -75 A 150 150 0 0 1 150 0 Z" fill="url(#gradient2)" filter="url(#shadow)" />
+    
+    <!-- チーム・アドバイザー (15%) -->
+    <path d="M 0 0 L 150 0 A 150 150 0 0 1 129.9 75 Z" fill="url(#gradient3)" filter="url(#shadow)" />
+    
+    <!-- リザーブ (20%) -->
+    <path d="M 0 0 L 129.9 75 A 150 150 0 0 1 0 150 Z" fill="url(#gradient4)" filter="url(#shadow)" />
+    
+    <!-- 初期投資家 (10%) -->
+    <path d="M 0 0 L 0 150 A 150 150 0 0 1 -150 0 L 0 0 Z" fill="url(#gradient5)" filter="url(#shadow)" />
+    
+    <!-- 中央の円 -->
+    <circle cx="0" cy="0" r="50" fill="white" filter="url(#shadow)" />
+    <text x="0" y="0" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#2d3436">ULTIMA</text>
+    <text x="0" y="20" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12" fill="#2d3436">ULT</text>
+  </g>
+  
+  <!-- 凡例 -->
+  <g transform="translate(20, 20)" font-family="Arial" font-size="12" fill="#2d3436">
+    <rect x="0" y="0" width="15" height="15" fill="url(#gradient1)" />
+    <text x="25" y="12">エコシステム開発 (30%)</text>
+    
+    <rect x="0" y="25" width="15" height="15" fill="url(#gradient2)" />
+    <text x="25" y="37">コミュニティ報酬 (25%)</text>
+    
+    <rect x="0" y="50" width="15" height="15" fill="url(#gradient3)" />
+    <text x="25" y="62">チーム・アドバイザー (15%)</text>
+    
+    <rect x="0" y="75" width="15" height="15" fill="url(#gradient4)" />
+    <text x="25" y="87">リザーブ (20%)</text>
+    
+    <rect x="0" y="100" width="15" height="15" fill="url(#gradient5)" />
+    <text x="25" y="112">初期投資家 (10%)</text>
+  </g>
+  
+  <!-- タイトル -->
+  <text x="200" y="380" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#2d3436">ULTIMA (ULT) トークン配分</text>
+</svg>
