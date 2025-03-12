@@ -1,0 +1,16 @@
+{
+  "name": "novaledger-website",
+  "version": "1.0.0",
+  "description": "NovaLedger website built with Byte Framework",
+  "main": "index.js",
+  "scripts": {
+    "dev": "byte dev",
+    "build": "byte build",
+    "start": "byte start"
+  },
+  "dependencies": {
+    "@bytecmd/cli": "^1.0.0",
+    "@bytecmd/core": "^1.0.0",
+    "@bytecmd/router": "^1.0.0"
+  }
+}
