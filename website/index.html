@@ -3,18 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UltimaChain - 次世代ブロックチェーン</title>
+    <title>UltimaChain - 次世代ブロックチェーン技術</title>
+    <meta name="description" content="UltimaChainは、超高速処理、高スケーラビリティ、ゼロ遅延決済、最小手数料、究極の分散性、量子耐性、AIによる最適化を実現する次世代ブロックチェーン技術です。">
+    <meta name="keywords" content="ブロックチェーン, UltimaChain, 高速, スケーラビリティ, ゼロ遅延, 量子耐性, AI, DAG, シャーディング, PoU, Proof of Ultima">
+    
+    <!-- OGP タグ -->
+    <meta property="og:title" content="UltimaChain - 次世代ブロックチェーン技術">
+    <meta property="og:description" content="UltimaChainは、超高速処理、高スケーラビリティ、ゼロ遅延決済、最小手数料、究極の分散性、量子耐性、AIによる最適化を実現する次世代ブロックチェーン技術です。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ultimachain.org/">
+    <meta property="og:image" content="https://ultimachain.org/assets/og-image.jpg">
+    <meta property="og:site_name" content="UltimaChain">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="UltimaChain - 次世代ブロックチェーン技術">
+    <meta name="twitter:description" content="UltimaChainは、超高速処理、高スケーラビリティ、ゼロ遅延決済、最小手数料、究極の分散性、量子耐性、AIによる最適化を実現する次世代ブロックチェーン技術です。">
+    <meta name="twitter:image" content="https://ultimachain.org/assets/og-image.jpg">
+    
+    <!-- ファビコン -->
+    <link rel="icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    
+    <!-- スタイルシート -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- 構造化データ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "UltimaChain",
+        "url": "https://ultimachain.org",
+        "logo": "https://ultimachain.org/assets/logo.svg",
+        "description": "UltimaChainは、超高速処理、高スケーラビリティ、ゼロ遅延決済、最小手数料、究極の分散性、量子耐性、AIによる最適化を実現する次世代ブロックチェーン技術です。",
+        "sameAs": [
+            "https://twitter.com/UltimaChain",
+            "https://github.com/enablerdao/UltimaChain",
+            "https://discord.gg/ultimachain"
+        ]
+    }
+    </script>
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">
-                <img src="assets/logo.svg" alt="UltimaChain Logo" class="logo-img">
+                <img src="assets/logo.svg" alt="UltimaChain Logo" class="logo-img" width="40" height="40">
                 <h1>UltimaChain</h1>
             </div>
-            <div class="menu-toggle">
+            <div class="menu-toggle" aria-label="メニューを開く" role="button" tabindex="0" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -26,6 +65,8 @@
                 <li><a href="#security">セキュリティ</a></li>
                 <li><a href="#ecosystem">エコシステム</a></li>
                 <li><a href="#tokenomics">トークノミクス</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="demo/blockchain-simulator.html">デモ</a></li>
             </ul>
         </nav>
         <div class="hero">
@@ -107,7 +148,7 @@
                 </div>
                 <div class="consensus-image">
                     <div class="pou-diagram">
-                        <img src="assets/pou-diagram.svg" alt="Proof of Ultima Diagram" class="diagram-img">
+                        <img src="assets/pou-diagram.svg" alt="Proof of Ultima Diagram" class="diagram-img" loading="lazy" width="500" height="400">
                     </div>
                 </div>
             </div>
@@ -164,7 +205,7 @@
             <div class="governance-content">
                 <div class="governance-image">
                     <div class="aidao-diagram">
-                        <img src="assets/aidao-diagram.svg" alt="AIDAO Governance Diagram" class="diagram-img">
+                        <img src="assets/aidao-diagram.svg" alt="AIDAO Governance Diagram" class="diagram-img" loading="lazy" width="500" height="400">
                     </div>
                 </div>
                 <div class="governance-info">
@@ -199,7 +240,7 @@
                 </div>
                 <div class="token-distribution">
                     <div class="chart-placeholder">
-                        <img src="assets/token-chart.svg" alt="ULTIMA Token Distribution" class="diagram-img">
+                        <img src="assets/token-chart.svg" alt="ULTIMA Token Distribution" class="diagram-img" loading="lazy" width="400" height="400">
                     </div>
                 </div>
             </div>
@@ -331,12 +372,110 @@
             </div>
         </div>
     </section>
+    
+    <section id="faq" class="section bg-dark">
+        <div class="container">
+            <h2 class="section-title">よくある質問</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" tabindex="0" aria-expanded="false">
+                        <h3>UltimaChainとは何ですか？</h3>
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>UltimaChainは、超高速処理（100,000+ TPS）、高スケーラビリティ、ゼロ遅延決済、最小手数料、究極の分散性、量子耐性、AIによる最適化など、現在のブロックチェーン技術の限界を超える革新的な機能を提供する次世代ブロックチェーンプラットフォームです。</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" tabindex="0" aria-expanded="false">
+                        <h3>Proof of Ultima（PoU）とは何ですか？</h3>
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Proof of Ultima（PoU）は、UltimaChainの革新的なコンセンサスアルゴリズムで、PoSの経済的インセンティブ、DAGの非同期性、PoHのタイムスタンプ管理の長所を融合しています。ランダム選出されたバリデーターグループが同時並行的にブロックを生成し、DAG構造を活用してコンフリクトを回避します。さらに、AIが信頼度スコアを継続的に最適化し、MEV対策としてバリデータごとのブロック提案をランダム化します。</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" tabindex="0" aria-expanded="false">
+                        <h3>UltimaChainはどのようにして100,000+ TPSを実現するのですか？</h3>
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>UltimaChainは、以下の技術を組み合わせることで超高速処理を実現します：</p>
+                        <ul>
+                            <li>DAG（Directed Acyclic Graph）構造による並列トランザクション処理</li>
+                            <li>シャーディングによるネットワークの水平スケーリング</li>
+                            <li>レイヤー2ソリューション（zkEVM、Optimistic Rollups）の統合</li>
+                            <li>AIによるネットワークリソースの動的最適化</li>
+                            <li>高効率なP2Pプロトコルと動的ルーティング</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" tabindex="0" aria-expanded="false">
+                        <h3>UltimaChainはどのようにして量子耐性を確保するのですか？</h3>
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>UltimaChainは、Post-Quantum Cryptography (PQC)を全面的に導入し、量子コンピュータによる攻撃に耐性のある暗号アルゴリズムを使用します。具体的には、格子ベース暗号（NTRU、CRYSTALS-Kyber）、ハッシュベース署名（SPHINCS+）などの技術を採用し、Quantum-Safeアドレスをデフォルト化しています。これにより、将来の量子コンピュータが実用化されても、セキュリティを維持することができます。</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" tabindex="0" aria-expanded="false">
+                        <h3>AIサポート型DAO（AIDAO）とは何ですか？</h3>
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>AIサポート型DAO（AIDAO）は、従来のDAOを超えた新しいガバナンスモデルです。AIが客観的データ、経済学的妥当性、ネットワークの健全性を考慮した上で、コミュニティの意思決定を支援します。Quadratic Votingを採用し、トークンホルダーが公平に参加できる仕組みを提供します。AIは決定を下すのではなく、データ分析と提案評価を通じて、より情報に基づいた意思決定をコミュニティが行えるようサポートします。</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" tabindex="0" aria-expanded="false">
+                        <h3>UltimaChainはどのような開発者ツールを提供していますか？</h3>
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>UltimaChainは、開発者向けに以下のツールを提供しています：</p>
+                        <ul>
+                            <li>EVM互換＋WASMベースのスマートコントラクト環境</li>
+                            <li>AIによるコード自動生成・最適化機能</li>
+                            <li>No-codeおよびLow-code開発環境</li>
+                            <li>ウォレット・マーケットプレイス・DEX・DeFiモジュールの標準提供</li>
+                            <li>テスト・デバッグフレームワーク</li>
+                            <li>モニタリングとアナリティクスツール</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" tabindex="0" aria-expanded="false">
+                        <h3>UltimaChainはどのようにして環境に配慮していますか？</h3>
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>UltimaChainは、以下の方法で環境持続可能性を確保しています：</p>
+                        <ul>
+                            <li>エネルギー効率の高いPoUコンセンサスアルゴリズム（BTC比99.99%以上の省エネ）</li>
+                            <li>再生可能エネルギーで稼働するグリーンノードへの報酬ボーナス</li>
+                            <li>カーボンフットプリントの継続的なモニタリングと削減</li>
+                            <li>エネルギー効率を考慮したプロトコル設計</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="assets/logo.svg" alt="UltimaChain Logo" class="footer-logo-img">
+                    <img src="assets/logo.svg" alt="UltimaChain Logo" class="footer-logo-img" width="60" height="60">
                     <div>
                         <h2>UltimaChain</h2>
                         <p>究極のブロックチェーン技術</p>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UltimaChain - ブロックチェーンシミュレーター</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="simulator.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="simulator-header">
+        <nav>
+            <div class="logo">
+                <img src="../assets/logo.svg" alt="UltimaChain Logo" class="logo-img">
+                <h1>UltimaChain</h1>
+            </div>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">ホーム</a></li>
+                <li><a href="../index.html#concept">コンセプト</a></li>
+                <li><a href="../index.html#architecture">アーキテクチャ</a></li>
+                <li><a href="../index.html#consensus">コンセンサス</a></li>
+                <li><a href="#" class="active">デモ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="simulator-container">
+        <section class="simulator-intro">
+            <h1>Proof of Ultima (PoU) シミュレーター</h1>
+            <p>このインタラクティブなデモでは、UltimaChainの革新的なコンセンサスアルゴリズム「Proof of Ultima (PoU)」の動作を視覚的に体験できます。DAG構造を活用した並列処理と、AIによる最適化がどのようにして超高速なトランザクション処理を実現するかをご覧ください。</p>
+        </section>
+
+        <section class="simulator-controls">
+            <div class="control-panel">
+                <div class="control-group">
+                    <h3>シミュレーション設定</h3>
+                    <div class="control-item">
+                        <label for="node-count">ノード数:</label>
+                        <input type="range" id="node-count" min="5" max="50" value="10" class="slider">
+                        <span id="node-count-value">10</span>
+                    </div>
+                    <div class="control-item">
+                        <label for="tx-rate">トランザクション生成率 (tx/秒):</label>
+                        <input type="range" id="tx-rate" min="10" max="1000" value="100" step="10" class="slider">
+                        <span id="tx-rate-value">100</span>
+                    </div>
+                    <div class="control-item">
+                        <label for="network-latency">ネットワーク遅延 (ms):</label>
+                        <input type="range" id="network-latency" min="0" max="500" value="50" step="10" class="slider">
+                        <span id="network-latency-value">50</span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <h3>アルゴリズム設定</h3>
+                    <div class="control-item">
+                        <label for="consensus-type">コンセンサスタイプ:</label>
+                        <select id="consensus-type" class="select">
+                            <option value="pou">Proof of Ultima (PoU)</option>
+                            <option value="pos">Proof of Stake (PoS)</option>
+                            <option value="pow">Proof of Work (PoW)</option>
+                        </select>
+                    </div>
+                    <div class="control-item">
+                        <label for="ai-optimization">AI最適化:</label>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="ai-optimization" checked>
+                            <label for="ai-optimization"></label>
+                        </div>
+                    </div>
+                    <div class="control-item">
+                        <label for="sharding">シャーディング:</label>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="sharding" checked>
+                            <label for="sharding"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-actions">
+                    <button id="start-simulation" class="btn primary">シミュレーション開始</button>
+                    <button id="pause-simulation" class="btn secondary" disabled>一時停止</button>
+                    <button id="reset-simulation" class="btn secondary" disabled>リセット</button>
+                </div>
+            </div>
+            <div class="metrics-panel">
+                <div class="metric-card">
+                    <h3>TPS</h3>
+                    <div class="metric-value" id="tps-value">0</div>
+                    <div class="metric-chart" id="tps-chart"></div>
+                </div>
+                <div class="metric-card">
+                    <h3>確認時間</h3>
+                    <div class="metric-value" id="confirmation-time">0 ms</div>
+                    <div class="metric-chart" id="confirmation-chart"></div>
+                </div>
+                <div class="metric-card">
+                    <h3>ネットワーク負荷</h3>
+                    <div class="metric-value" id="network-load">0%</div>
+                    <div class="metric-chart" id="network-chart"></div>
+                </div>
+                <div class="metric-card">
+                    <h3>エネルギー効率</h3>
+                    <div class="metric-value" id="energy-efficiency">高</div>
+                    <div class="metric-chart" id="energy-chart"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="simulator-visualization">
+            <div class="visualization-container">
+                <div class="visualization-header">
+                    <h3>DAGネットワークビジュアライゼーション</h3>
+                    <div class="visualization-controls">
+                        <button id="zoom-in" class="viz-btn"><i class="fas fa-search-plus"></i></button>
+                        <button id="zoom-out" class="viz-btn"><i class="fas fa-search-minus"></i></button>
+                        <button id="reset-view" class="viz-btn"><i class="fas fa-sync-alt"></i></button>
+                    </div>
+                </div>
+                <div class="visualization-canvas" id="dag-canvas">
+                    <!-- キャンバスはJavaScriptで描画 -->
+                    <div class="loading-placeholder">
+                        <div class="spinner"></div>
+                        <p>シミュレーションを開始してください</p>
+                    </div>
+                </div>
+            </div>
+            <div class="transaction-log">
+                <h3>トランザクションログ</h3>
+                <div class="log-container" id="tx-log">
+                    <div class="log-entry">
+                        <span class="log-time">--:--:--</span>
+                        <span class="log-type">INFO</span>
+                        <span class="log-message">シミュレーションを開始してください</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="simulator-comparison">
+            <h2>コンセンサスアルゴリズム比較</h2>
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>特性</th>
+                            <th>Proof of Ultima (PoU)</th>
+                            <th>Proof of Stake (PoS)</th>
+                            <th>Proof of Work (PoW)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>TPS</td>
+                            <td>100,000+</td>
+                            <td>1,000-10,000</td>
+                            <td>5-30</td>
+                        </tr>
+                        <tr>
+                            <td>確認時間</td>
+                            <td>即時</td>
+                            <td>数秒〜数分</td>
+                            <td>数分〜数時間</td>
+                        </tr>
+                        <tr>
+                            <td>エネルギー効率</td>
+                            <td>非常に高い</td>
+                            <td>高い</td>
+                            <td>非常に低い</td>
+                        </tr>
+                        <tr>
+                            <td>分散性</td>
+                            <td>高い</td>
+                            <td>中〜高</td>
+                            <td>中〜低</td>
+                        </tr>
+                        <tr>
+                            <td>セキュリティ</td>
+                            <td>AI強化型</td>
+                            <td>経済的インセンティブ</td>
+                            <td>計算能力</td>
+                        </tr>
+                        <tr>
+                            <td>スケーラビリティ</td>
+                            <td>無制限</td>
+                            <td>制限あり</td>
+                            <td>非常に制限あり</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="simulator-explanation">
+            <h2>Proof of Ultima (PoU) の仕組み</h2>
+            <div class="explanation-content">
+                <div class="explanation-text">
+                    <p>UltimaChainの革新的なコンセンサスアルゴリズム「Proof of Ultima (PoU)」は、以下の3つの主要技術を融合しています：</p>
+                    <ol>
+                        <li><strong>Proof of Stake (PoS)</strong>: 経済的インセンティブによるセキュリティ</li>
+                        <li><strong>Directed Acyclic Graph (DAG)</strong>: 非同期並列処理による高スループット</li>
+                        <li><strong>Proof of History (PoH)</strong>: 時間証明による信頼性の確保</li>
+                    </ol>
+                    <p>さらに、AIによる継続的な最適化が加わることで、ネットワークの状態に応じた動的調整が可能になります。バリデータの信頼度スコアはトランザクションの妥当性、レスポンス時間、過去の行動履歴などに基づいて計算され、最も信頼性の高いバリデータがブロック生成に参加します。</p>
+                    <p>DAG構造を活用することで、トランザクションの依存関係のみを考慮した並列処理が可能になり、理論上無制限のスケーラビリティを実現します。また、MEV（Maximal Extractable Value）対策として、バリデータごとのブロック提案をランダム化することで、公平性を確保しています。</p>
+                </div>
+                <div class="explanation-diagram">
+                    <img src="../assets/pou-diagram.svg" alt="Proof of Ultima Diagram" class="explanation-img">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="../assets/logo.svg" alt="UltimaChain Logo" class="footer-logo-img">
+                    <div>
+                        <h2>UltimaChain</h2>
+                        <p>究極のブロックチェーン技術</p>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-links-column">
+                        <h3>リソース</h3>
+                        <ul>
+                            <li><a href="#">ホワイトペーパー</a></li>
+                            <li><a href="#">ドキュメント</a></li>
+                            <li><a href="#">ロードマップ</a></li>
+                            <li><a href="#">GitHub</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column">
+                        <h3>コミュニティ</h3>
+                        <ul>
+                            <li><a href="#">Discord</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Telegram</a></li>
+                            <li><a href="#">Medium</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column">
+                        <h3>会社情報</h3>
+                        <ul>
+                            <li><a href="#">チーム</a></li>
+                            <li><a href="#">パートナー</a></li>
+                            <li><a href="#">採用情報</a></li>
+                            <li><a href="#">お問い合わせ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 UltimaChain. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../script.js"></script>
+    <script src="simulator.js"></script>
+</body>
+</html>
