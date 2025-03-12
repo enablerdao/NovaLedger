@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400">
+  <defs>
+    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6c5ce7" />
+      <stop offset="100%" stop-color="#00cec9" />
+    </linearGradient>
+    <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fd79a8" />
+      <stop offset="100%" stop-color="#e84393" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect x="0" y="0" width="500" height="400" fill="#2d3436" opacity="0.1" rx="10" ry="10" />
+  
+  <!-- DAG構造 -->
+  <circle cx="100" cy="100" r="20" fill="url(#gradient1)" />
+  <circle cx="180" cy="60" r="20" fill="url(#gradient1)" />
+  <circle cx="260" cy="100" r="20" fill="url(#gradient1)" />
+  <circle cx="340" cy="60" r="20" fill="url(#gradient1)" />
+  <circle cx="420" cy="100" r="20" fill="url(#gradient1)" />
+  
+  <circle cx="140" cy="180" r="20" fill="url(#gradient1)" />
+  <circle cx="220" cy="140" r="20" fill="url(#gradient1)" />
+  <circle cx="300" cy="180" r="20" fill="url(#gradient1)" />
+  <circle cx="380" cy="140" r="20" fill="url(#gradient1)" />
+  
+  <circle cx="100" cy="260" r="20" fill="url(#gradient1)" />
+  <circle cx="180" cy="220" r="20" fill="url(#gradient1)" />
+  <circle cx="260" cy="260" r="20" fill="url(#gradient1)" />
+  <circle cx="340" cy="220" r="20" fill="url(#gradient1)" />
+  <circle cx="420" cy="260" r="20" fill="url(#gradient1)" />
+  
+  <circle cx="140" cy="340" r="20" fill="url(#gradient1)" />
+  <circle cx="220" cy="300" r="20" fill="url(#gradient1)" />
+  <circle cx="300" cy="340" r="20" fill="url(#gradient1)" />
+  <circle cx="380" cy="300" r="20" fill="url(#gradient1)" />
+  
+  <!-- 接続線 -->
+  <line x1="100" y1="100" x2="180" y2="60" stroke="white" stroke-width="2" />
+  <line x1="180" y1="60" x2="260" y2="100" stroke="white" stroke-width="2" />
+  <line x1="260" y1="100" x2="340" y2="60" stroke="white" stroke-width="2" />
+  <line x1="340" y1="60" x2="420" y2="100" stroke="white" stroke-width="2" />
+  
+  <line x1="100" y1="100" x2="140" y2="180" stroke="white" stroke-width="2" />
+  <line x1="180" y1="60" x2="220" y2="140" stroke="white" stroke-width="2" />
+  <line x1="260" y1="100" x2="300" y2="180" stroke="white" stroke-width="2" />
+  <line x1="340" y1="60" x2="380" y2="140" stroke="white" stroke-width="2" />
+  
+  <line x1="140" y1="180" x2="180" y2="220" stroke="white" stroke-width="2" />
+  <line x1="220" y1="140" x2="260" y2="100" stroke="white" stroke-width="2" />
+  <line x1="300" y1="180" x2="340" y2="220" stroke="white" stroke-width="2" />
+  <line x1="380" y1="140" x2="420" y2="100" stroke="white" stroke-width="2" />
+  
+  <line x1="100" y1="260" x2="140" y2="180" stroke="white" stroke-width="2" />
+  <line x1="180" y1="220" x2="220" y2="140" stroke="white" stroke-width="2" />
+  <line x1="260" y1="260" x2="300" y2="180" stroke="white" stroke-width="2" />
+  <line x1="340" y1="220" x2="380" y2="140" stroke="white" stroke-width="2" />
+  
+  <line x1="100" y1="260" x2="180" y2="220" stroke="white" stroke-width="2" />
+  <line x1="180" y1="220" x2="260" y2="260" stroke="white" stroke-width="2" />
+  <line x1="260" y1="260" x2="340" y2="220" stroke="white" stroke-width="2" />
+  <line x1="340" y1="220" x2="420" y2="260" stroke="white" stroke-width="2" />
+  
+  <line x1="140" y1="340" x2="100" y2="260" stroke="white" stroke-width="2" />
+  <line x1="220" y1="300" x2="180" y2="220" stroke="white" stroke-width="2" />
+  <line x1="300" y1="340" x2="260" y2="260" stroke="white" stroke-width="2" />
+  <line x1="380" y1="300" x2="340" y2="220" stroke="white" stroke-width="2" />
+  
+  <line x1="140" y1="340" x2="220" y2="300" stroke="white" stroke-width="2" />
+  <line x1="220" y1="300" x2="300" y2="340" stroke="white" stroke-width="2" />
+  <line x1="300" y1="340" x2="380" y2="300" stroke="white" stroke-width="2" />
+  
+  <!-- AI最適化表現 -->
+  <circle cx="250" cy="200" r="40" fill="url(#gradient2)" opacity="0.3" />
+  <text x="250" y="200" font-family="Arial" font-size="12" fill="white" text-anchor="middle" dominant-baseline="middle">AI最適化</text>
+  
+  <!-- ラベル -->
+  <text x="250" y="380" font-family="Arial" font-size="16" fill="#2d3436" text-anchor="middle">Proof of Nova (PoN) コンセンサス</text>
+</svg>

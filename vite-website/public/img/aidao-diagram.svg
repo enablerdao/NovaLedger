@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6c5ce7" />
+      <stop offset="100%" stop-color="#00cec9" />
+    </linearGradient>
+    <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fd79a8" />
+      <stop offset="100%" stop-color="#e84393" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect x="0" y="0" width="400" height="400" fill="#2d3436" opacity="0.1" rx="10" ry="10" />
+  
+  <!-- 中央のAIノード -->
+  <circle cx="200" cy="200" r="60" fill="url(#gradient2)" />
+  <text x="200" y="200" font-family="Arial" font-size="16" fill="white" text-anchor="middle" dominant-baseline="middle">AI</text>
+  
+  <!-- コミュニティノード -->
+  <circle cx="100" cy="100" r="40" fill="url(#gradient1)" />
+  <text x="100" y="100" font-family="Arial" font-size="12" fill="white" text-anchor="middle" dominant-baseline="middle">コミュニティ</text>
+  
+  <circle cx="300" cy="100" r="40" fill="url(#gradient1)" />
+  <text x="300" y="100" font-family="Arial" font-size="12" fill="white" text-anchor="middle" dominant-baseline="middle">バリデータ</text>
+  
+  <circle cx="100" cy="300" r="40" fill="url(#gradient1)" />
+  <text x="100" y="300" font-family="Arial" font-size="12" fill="white" text-anchor="middle" dominant-baseline="middle">開発者</text>
+  
+  <circle cx="300" cy="300" r="40" fill="url(#gradient1)" />
+  <text x="300" y="300" font-family="Arial" font-size="12" fill="white" text-anchor="middle" dominant-baseline="middle">トークン<tspan x="300" dy="15">ホルダー</tspan></text>
+  
+  <!-- 接続線 -->
+  <line x1="140" y1="140" x2="170" y2="170" stroke="white" stroke-width="3" />
+  <line x1="260" y1="140" x2="230" y2="170" stroke="white" stroke-width="3" />
+  <line x1="140" y1="260" x2="170" y2="230" stroke="white" stroke-width="3" />
+  <line x1="260" y1="260" x2="230" y2="230" stroke="white" stroke-width="3" />
+  
+  <!-- データフロー表現 -->
+  <circle cx="155" cy="155" r="8" fill="white">
+    <animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="cx" values="140;170" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="cy" values="140;170" dur="2s" repeatCount="indefinite" />
+  </circle>
+  
+  <circle cx="245" cy="155" r="8" fill="white">
+    <animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="cx" values="260;230" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="cy" values="140;170" dur="2s" repeatCount="indefinite" />
+  </circle>
+  
+  <circle cx="155" cy="245" r="8" fill="white">
+    <animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="cx" values="140;170" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="cy" values="260;230" dur="2s" repeatCount="indefinite" />
+  </circle>
+  
+  <circle cx="245" cy="245" r="8" fill="white">
+    <animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="cx" values="260;230" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="cy" values="260;230" dur="2s" repeatCount="indefinite" />
+  </circle>
+  
+  <!-- ラベル -->
+  <text x="200" y="380" font-family="Arial" font-size="16" fill="#2d3436" text-anchor="middle">AIサポート型DAO (AIDAO)</text>
+</svg>
