@@ -1,0 +1,82 @@
+/* NovaLedger固有のスタイル */
+:root {
+    --primary-color: #6366f1; /* indigo */
+    --primary-dark: #4f46e5;
+    --primary-light: #818cf8;
+    --accent-color: #ec4899; /* pink */
+}
+
+.bg-primary {
+    background-color: var(--primary-color);
+}
+
+.text-primary {
+    color: var(--primary-color);
+}
+
+.border-primary {
+    border-color: var(--primary-color);
+}
+
+.hover\:bg-primary:hover {
+    background-color: var(--primary-dark);
+}
+
+.hover\:text-primary:hover {
+    color: var(--primary-light);
+}
+
+/* ヒーローセクションの背景 */
+.hero-bg {
+    background: linear-gradient(135deg, #4f46e5 0%, #6366f1 50%, #818cf8 100%);
+    background-size: 200% 200%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ロードマップのカスタムスタイル */
+.roadmap-item:nth-child(odd)::before {
+    background-color: var(--primary-color);
+}
+
+.roadmap-item:nth-child(even)::before {
+    background-color: var(--primary-color);
+}
+
+/* フィーチャーカードのカスタムスタイル */
+.feature-card {
+    border-left: 4px solid var(--primary-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.feature-card:hover {
+    border-color: var(--accent-color);
+}
+
+/* アニメーション */
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
