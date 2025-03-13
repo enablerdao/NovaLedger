@@ -2,6 +2,10 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/01430e1e-8ce0-46d3-a66f-2a865419a958/deploy-status)](https://app.netlify.com/sites/novaledger/deploys)
 
+> **開発進捗状況**: コンセプト段階 | ウェブサイト実装中 | 17ファイル | 最終更新: 2025年3月
+> 
+> NovaLedgerは現在コンセプト段階のプロジェクトで、主にウェブサイトとドキュメントの開発が進行中です。コアブロックチェーン機能の実装はまだ開始されていません。
+
 ```
  _   _                _          _                 
 | \ | | _____   ____ | |    ___  __| | __ _  ___ _ __ 
